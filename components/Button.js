@@ -2,7 +2,7 @@ import React from "react";
 import { Pressable, Text, StyleSheet } from "react-native";
 
 
-function Button({ children, onPress, btnColor = "default", btnType = "none" }) {
+function Button({ children, onPress, btnColor = "default", btnType = "none", disabled=false }) {
 
     let bgColor = btnColor === "primary" ? "#F4CE14" : btnColor === "default" ? "#9dbef2" : "#495E57";
 
@@ -12,10 +12,11 @@ function Button({ children, onPress, btnColor = "default", btnType = "none" }) {
     textColor = btnType === "outline" ? bgColor : textColor;
 
     bgColor = btnType === "outline" ? "#fff" : bgColor;
+    bgColor = disabled ? "#4f4f4f" : bgColor;
 
 
     return (
-        <Pressable style={[styles.container, { backgroundColor: bgColor, borderColor: borderColor, borderWidth: borderWidth }]} onPress={onPress}>
+        <Pressable style={[styles.container, { backgroundColor: bgColor, borderColor: borderColor, borderWidth: borderWidth }]} onPress={onPress} disabled={disabled} di>
             <Text style={[styles.text, { color: textColor }]}>{children}</Text>
         </Pressable>
     );

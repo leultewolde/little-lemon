@@ -1,28 +1,37 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { View, Text, Image, TextInput, StyleSheet, Alert, ActivityIndicator } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import Button from "../components/Button";
+import { useNavigation } from "@react-navigation/native";
+import { AppContext } from "../context/AppContext";
+import { isNotEmpty } from "../utils";
 
 
-export default function Onboarding({ navigation }) {
+export default function Onboarding() {
+    const navigation = useNavigation();
 
     const [firstName, setFirstName] = useState("");
+    const { setIsOnBoardingComlete } = useContext(AppContext);
     const [email, setEmail] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit = function () {
-        setIsLoading(true);
-        AsyncStorage.setItem("user", JSON.stringify({ "email": email, "firstName": firstName }))
-            .then((value) => {
-                navigation.navigate("Profile");
-            })
-            .catch((err) => {
-                Alert.alert("Error", err.message);
-                setIsLoading(false);
-            }).finally(() => {
-                setIsLoading(false);
-            });
+        let inputsValid = isNotEmpty(firstName) && isNotEmpty(email);
+        if (inputsValid) {
+            setIsLoading(true);
+            AsyncStorage.setItem("user", JSON.stringify({ "email": email, "firstName": firstName }))
+                .then((value) => {
+                    // navigation.reset();
+                    setIsOnBoardingComlete(true);
+                })
+                .catch((err) => {
+                    Alert.alert("Error", err.message);
+                    setIsLoading(false);
+                }).finally(() => {
+                    setIsLoading(false);
+                });
+        }
     }
 
     return (
