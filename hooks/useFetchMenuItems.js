@@ -1,25 +1,15 @@
 import { useEffect, useState } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { isNotEmpty } from "../utils";
+import MenuService from "../db/MenuService";
 
-const initialValue = {
-    name: "",
-    description: "",
-    price: "",
-    image: ""
-};
-
-const url = "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json";
-
-const useFetchMenuItems = function (setIsLoading = (val) => { }) {
-    const [menuItems, setMenuItems] = useState(initialValue);
+export function useGetMenuItems(category = "all", searchQuery = "", setIsLoading = (val) => { }) {
+    const menuService = new MenuService();
+    const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(url)
-            .then((response) => response.json())
-            .then((response) => {
-                setMenuItems(response.menu);
+        menuService.getMenuItems(category, searchQuery)
+            .then((values) => {
+                setMenuItems(values);
             })
             .catch((err) => {
                 Alert.alert("Error", err.message);
@@ -27,9 +17,7 @@ const useFetchMenuItems = function (setIsLoading = (val) => { }) {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, []);
+    }, [category, searchQuery]);
 
     return { menuItems };
 }
-
-export default useFetchMenuItems;

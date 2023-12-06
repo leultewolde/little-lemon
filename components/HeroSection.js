@@ -1,26 +1,26 @@
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons';
+import { Image, StyleSheet, Text, View } from "react-native";
+import SearchInput from "./SearchInput";
+
+import {
+    restaurant_name,
+    restaurant_location,
+    restaurant_desc
+} from "../constants";
 
 
-export default function HeroSection() {
+export default function HeroSection({searchQuery, setSearchQuery}) {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Little Lemon</Text>
+            <Text style={styles.title}>{restaurant_name}</Text>
             <View style={styles.descContainer}>
                 <View style={styles.descText}>
-                    <Text style={styles.cityName}>Chicago</Text>
-                    <Text style={styles.desc}>
-                        We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
-                    </Text>
+                    <Text style={styles.cityName}>{restaurant_location}</Text>
+                    <Text style={styles.desc}>{restaurant_desc}</Text>
                 </View>
                 <Image style={styles.descImage} source={require("../assets/HeroImage.png")} />
             </View>
-            <View style={styles.searchInputContainer}>
-                <Icon name="search" size={25} />
-                <TextInput
-                    placeholder="Search"
-                    style={styles.searchInput} />
-            </View>
+
+            <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         </View>
     );
 }
@@ -57,16 +57,5 @@ const styles = StyleSheet.create({
         height: 150,
         marginVertical: 20,
         borderRadius: 20
-    },
-    searchInputContainer: {
-        backgroundColor: "#fff",
-        borderRadius: 8,
-        paddingLeft: 5,
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    searchInput: {
-        padding: 10,
-        fontSize: 20
     }
 });
