@@ -10,6 +10,7 @@ import useFetchUser from '../hooks/useFetchUser';
 import { AppContext } from '../context/AppContext';
 import Home from '../screens/Home';
 import HomeHeader from '../components/HomeHeader';
+import OnBoardingHeader from '../components/OnBoardingHeader';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,7 +40,12 @@ export default function RootNavigator() {
                     <Stack.Screen name="Profile" component={Profile} />
                 </>
             ) : (
-                <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
+                <Stack.Screen 
+                name="Onboarding" 
+                component={Onboarding} 
+                options={{
+                    header: () => <OnBoardingHeader />
+                }} />
             )}
         </Stack.Navigator>
     );
