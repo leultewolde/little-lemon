@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "littlelemon-407321",
+  "private_key_id": "786831e70dcea415de5d3aa1a9ebc8ea36cd43b3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCdnK2y4d3fklym\nYmwxafW3KYsrPo/bXoZ3ffUr50jgCfwWkLC1V48SdUoZsPAz0rg8D9BuSbCS7ihZ\noFw/y/q1xzB2nS2JX3tBwmqxJ9sFA7PzS7mQdAhbcZfxySn3sf2nZrFdWtZrz9fC\n93rzXcnU9QDAdPYzHDMeOdvaeKa/ZmNHCQ+x8+ea5qzmRrCGMjxfJgSmNGRk6n8N\nXmoYPKvSc+rsjW8yaybn6v+QNq83Vv49py+2Hto/R6v2USAd4d52GRrBLPOin9EQ\nuLW2QpKPTt2uvYixiycKndmGX9N38wGxoVhqZ4uwmQVhBqL8ViUScNVHVn7InYTv\nDjNwK6bBAgMBAAECggEAALGNIw/06eFGHCFDluZDm45uulxI6f4SCiDqQBrpPWtF\nVDqHXMmsjXwZrRQsAyweIXVny0GyubuLluEAiWtE+nV0ot+8SOQML+nwfgh8AXsw\npLNbhvt3+0IoQScbmq9yT3EZeozUG+DwDvuPl245JXlFV0d3ezIwflV6kHUYnZ/W\njwfkwz3HBtvTRDhbR50PIoaFRgCdpAHjuEq5SFwkxbTp520DWMnrVgAgYhGQrPzo\nfgH68qj6KGUvUTO00yRFIQDmuflkhnxBFrLxviLA09hLELE2EIgvKido/rgGrE8S\nZse1b2MAngrRXjH7mzm7BhFLwBvqHcVoc0rHZNRmAQKBgQDPkP0RGxSImfwam43x\nChEDVmYFOdyK2Zv9LINPky+BPAlvV52NyQ2XrXnnx5NoFq8BQEYcdmQDLeq3N98v\nVbA/pJ9mN27P7+G/sHJwSUqLKRb1uCkbGvw1bRnmD8AMe6CEcE+Pm9jl/nCs/ipT\nhABKVaPsk3TeiFmwA/Nnf/6SAQKBgQDCY6jI6s5u/GMk1J6lBQSVIDDtFJajMGAZ\n1JbaJM2UWtvz4XZmb2J4QuTtnKj/URJOXuyUBNzGgl0WIfEloxcm4G2kZJN9SEb4\nGsw5gnF+eFKWthokuIb5akvTSACBi8Vh8ApCcied4Aq3G2/0BR9qQ5HU2xIKYvJC\nZca0JteUwQKBgQDL5UdTGGDxVyI5GPk0AIl519Nb6tzkYKNE7gcHkjQmJU23XD/e\n2dNKXhTURE5e/3lmJzc4GmxgWyioVnAdVXVO723NwUJPbPs7jB6+gqCBVxnAwulO\nQRHjgYrhXjNvj7m8n37oOVW1iF4y8XGunIqUetAOQ0OYniRMLXVbBHaUAQKBgBqa\nWvoMMG49+i+LLZ713deuzSNVAvyYXT6Luo1mJgBcoudwfqysJ7S/qubd3r76UGAL\nW6MyOyirpKOnx4HYHQ4D/t1Vql2l65h+yl5AfNnLC7p2d4N5AXfW1UO4AeG4yC2M\nFUtcphFUHQNMLPkfTlpTnvybco+bVP5DQXtcKXrBAoGANxP13OXkPsy60MWcu7Sj\nnTsIkQ+XtyI+N77ln70zSBK+j2sL9Nur3WbmJ4aFP6zYN+IRGKRcDUMTXPqCI1Zm\nxysJEkFg385LorZaAxHx967fWZB/jQ6hnOL09ExKrnl5Qm5KcKW3puA/to81vkSP\nedwJF7rRP6A/E1naDZh5cdU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "expo-service@littlelemon-407321.iam.gserviceaccount.com",
+  "client_id": "103492931747819355539",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/expo-service%40littlelemon-407321.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
